@@ -1,0 +1,93 @@
+{
+  "name": "root",
+  "private": true,
+  "version": "0.0.1",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "commit": "git-cz",
+    "build": "yarn build:packages && yarn build:tools",
+    "build:packages": "lerna run build --scope '@wisewe/*'",
+    "build:tools": "cross-env BABEL_ENV=utils babel packages/tools --extensions .ts --out-dir lib/tools",
+    "upgrade:v": "bash ./scripts/update-versions.sh",
+    "fast-build": "sh ./scripts/build.sh",
+    "test": "jest"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push-todo-open": "npm run test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": "eslint --fix"
+  },
+  "files": [
+    "lib",
+    "es",
+    "packages"
+  ],
+  "peerDependencies": {
+    "vue": "3.1.x"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@vue/babel-plugin-jsx": "^1.0.6",
+    "@vue/cli-plugin-babel": "^4.5.13",
+    "@vue/cli-plugin-eslint": "^4.5.13",
+    "@vue/cli-service": "^4.5.13",
+    "@vue/compiler-sfc": "^3.1.4",
+    "@vue/test-utils": "^1.2.1",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.0.6",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-preset-vue": "^2.0.2",
+    "commitizen": "^4.2.4",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.6",
+    "cz-lerna-changelog": "^2.0.3",
+    "esbuild-jest": "^0.5.0",
+    "eslint": "^7.30.0",
+    "eslint-plugin-vue": "^7.13.0",
+    "husky": "^7.0.1",
+    "jest": "^27.0.6",
+    "jest-serializer-vue": "^2.0.2",
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.0.0",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
+    "standard": "^16.0.3",
+    "style-loader": "^3.0.0",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.5",
+    "vue-jest": "^3.0.7",
+    "vue-loader": "^16.3.0",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.161",
+    "lodash": "^4.17.20",
+    "element-plus": "^1.0.2-beta.55",
+    "vue": "^3.1.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
