@@ -41,6 +41,7 @@ export default defineComponent({
         const defaultType = computed(()=>props.type);
         const defaultDisabled = computed(()=>props.disabled);
         const defaultVal = computed(()=>props.value);
+        console.log(defaultType,defaultDisabled,defaultVal,'123')
         return{
             defaultType,
             defaultDisabled,
