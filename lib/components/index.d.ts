@@ -1,5 +1,6 @@
-import WButton from "./src/Button.vue";
-import { App } from "vue";
+import 'element-plus/lib/theme-chalk/index.css';
+import WButton from './src/Button';
+import { App } from 'vue';
 declare const _default: {
     install: (app: App<any>) => void;
 };
