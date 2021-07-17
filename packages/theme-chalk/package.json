@@ -1,0 +1,36 @@
+{
+  "name": "wisewe-theme-chalk",
+  "version": "0.0.1",
+  "description": "Wisewe component chalk theme.",
+  "main": "lib/index.css",
+  "style": "lib/index.css",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangg-912/wisewe-repo.git"
+  },
+  "keywords": [
+    "element",
+    "theme"
+  ],
+  "author": "wanggang@wisewe.cn",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-rename": "^2.0.0"
+  },
+  "dependencies": {}
+}

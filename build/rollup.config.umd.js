@@ -10,12 +10,16 @@ const deps = Object.keys(pkg.dependencies)
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const vue = require('rollup-plugin-vue')
 
+function createFileName(formatName) {
+  return `lib/wisewe.${formatName}.js`;
+}
+
 export default [
   {
     input: path.resolve(__dirname, '../packages/components/index.ts'),
     output: {
       format: 'umd',
-      file: 'lib/index.umd.js',
+      file: createFileName('umd'),
       name: 'wisewe',
       globals: {
         vue: 'vue'
