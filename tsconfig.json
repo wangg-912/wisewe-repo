@@ -1,25 +1,35 @@
 {
   "compilerOptions": {
     "noImplicitAny": false,
-    "target": "es6",
-    "module": "ESNext",
+    "target": "esnext",
+    "module": "esnext",
     "strict": true,
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
+    "experimentalDecorators": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "declaration": true,
     "baseUrl": ".",
+    "types": [
+      "webpack-env",
+      "jest"
+    ],
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "@/*": [
         "examples/*"
       ]
     },
-    "lib": ["DOM", "ESNext", "DOM.Iterable", "ScriptHost", "jest"]
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
   },
   "include": [
     "examples/**/*.ts",
@@ -29,7 +39,7 @@
     "packages/**/*.tsx",
     "packages/**/*.vue",
     "typings/**/*.ts"
-, "packages/components/src/Button/__tests__/button.spec.js", "packages/tools/__tests__/tools.test.js"  ],
+  ],
   "exclude": [
     "node_modules"
   ]
