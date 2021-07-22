@@ -9,5 +9,6 @@
   },
   "devDependencies": {
     "@vue/test-utils": "^2.0.0-beta.3"
-  }
+  },
+  "gitHead": "dc2dbf169947095e808f9d732e8e55bd2c08fc92"
 }
