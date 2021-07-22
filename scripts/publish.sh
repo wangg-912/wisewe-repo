@@ -1,7 +1,9 @@
-cat package.json \
-| grep -v '"private":' \
-| grep -v '"version":' \
-| sed "s/\(\"name\": \"element-plus\"\)/\1,\n  \"version\": \"${TAG_VERSION}\"/g" > package.json.bak
-
-cat package.json.bak > package.json
-npm publish --registry ${REGISTRY}
+npm config get registry # 检查仓库镜像库
+npm config set registry=http://registry.npmjs.org
+echo '请进⾏登录相关操作：'
+npm login # 登陆
+echo "-------publishing-------"
+npm publish # 发布
+npm config set registry=https://registry.npm.taobao.org # 设置为淘宝镜像
+echo "发布完成"
+exit

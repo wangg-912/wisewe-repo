@@ -1,7 +1,7 @@
 {
   "name": "wisewe",
   "private": false,
-  "version": "0.0.3-beta.0",
+  "version": "0.0.3-beta.1",
   "workspaces": [
     "packages/*"
   ],
@@ -16,7 +16,8 @@
     "build:tools": "cross-env BABEL_ENV=utils babel packages/tools --extensions .ts --out-dir lib/tools",
     "build:theme": "gulp build --gulpfile packages/theme-chalk/gulpfile.js",
     "lint": "vue-cli-service lint",
-    "upgrade:v": "bash ./scripts/update-versions.sh",
+    "publish": "lerna publish",
+    "upk:publish": "bash ./scripts/publish.sh",
     "fast-build": "sh ./scripts/build.sh",
     "jest": "vue-cli-service test:unit",
     "codecov": "codecov"
