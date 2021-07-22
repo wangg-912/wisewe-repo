@@ -1,6 +1,6 @@
 {
   "name": "@wisewe/tools",
-  "version": "0.0.1-0.0.3-alpha.0.0",
+  "version": "0.0.3-alpha.0.0",
   "description": "> TODO: description",
   "author": "王刚 <wanggang@tellyes.com>",
   "license": "ISC",
@@ -10,5 +10,5 @@
   "devDependencies": {
     "@vue/test-utils": "^2.0.0-beta.3"
   },
-  "gitHead": "dc2dbf169947095e808f9d732e8e55bd2c08fc92"
+  "gitHead": "bd086d9a31a0f0ac042fe89b98c19ba104517f2c"
 }
