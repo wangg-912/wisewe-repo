@@ -1,6 +1,6 @@
 {
   "name": "@wisewe/theme-chalk",
-  "version": "0.0.3-alpha.0",
+  "version": "0.0.3-beta.1",
   "description": "Wisewe component chalk theme.",
   "main": "lib/index.css",
   "style": "lib/index.css",
